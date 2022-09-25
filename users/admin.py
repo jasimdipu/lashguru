@@ -13,10 +13,10 @@ class UserModelAdmin(admin.ModelAdmin):
     ordering = ('-created_at',)
     list_display = ('email', 'user_name', 'last_name', 'date_of_birth',
                     'is_active', 'is_staff', 'change_button', 'delete_button')
-    fieldsets = (
-        (None, {'fields': ('email', 'user_name', 'first_name', 'last_name', 'date_of_birth', 'photo')}),
-        ('Permissions', {'fields': ('is_staff', 'is_active')}),
-    )
+    # fieldsets = (
+    #     (None, {'fields': ('email', 'user_name', 'first_name', 'last_name', 'date_of_birth', 'photo')}),
+    #     ('Permissions', {'fields': ('is_staff', 'is_active')}),
+    # )
     formfield_overrides = {
         models.TextField: {'widget': Textarea(attrs={'rows': 20, 'cols': 60})},
     }

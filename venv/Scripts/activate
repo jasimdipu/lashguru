@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="D:\my_folder\fiverr\lashguru\venv"
+VIRTUAL_ENV="D:\my_folder\fiverr\vietnum\venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

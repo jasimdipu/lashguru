@@ -50,11 +50,11 @@ class NewUser(AbstractBaseUser, PermissionsMixin, BaseModel):
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['user_name', 'first_name', 'last_name']
 
-    def change_button(self, obj):
-        return format_html('<a class="btn" href="/admin/my_app/my_model/{}/change/">Edit</a>', obj.id)
+    def change_button(self):
+        return format_html('<a class="btn" href="/admin/users/models/{}/edit/">Edit</a>', self.id)
 
-    def delete_button(self, obj):
-        return format_html('<a class="btn" href="/admin/my_app/my_model/{}/delete/">Delete</a>', obj.id)
+    def delete_button(self):
+        return format_html('<a class="btn" href="/admin/users/models/{}/delete/">Delete</a>',self.id)
 
     def __str__(self):
         return self.user_name
